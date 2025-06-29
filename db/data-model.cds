@@ -42,10 +42,11 @@ entity Address : cuid {
 
 
 entity PurchaseOrders : cuid {
-    ponum : Integer;
-    descr : String;
-    poitem: Association to ExternalPurchaseItem on poitem.POItem = poitem_POItem;
-    poitem_POItem: Integer;
+    ponum         : Integer;
+    descr         : String;
+    poitem        : Association to ExternalPurchaseItem
+                        on poitem.POItem = poitem_POItem;
+    poitem_POItem : Integer;
 }
 
 
@@ -53,4 +54,5 @@ entity ExternalPurchaseItem {
     key POItem : Integer;
     key POHNum : Integer;
         descr  : String;
+        code   : String(2);
 }
