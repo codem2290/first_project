@@ -55,4 +55,5 @@ entity ExternalPurchaseItem {
     key POHNum : Integer;
         descr  : String;
         code   : String(2);
+        name   : String;
 }
